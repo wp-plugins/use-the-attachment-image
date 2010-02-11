@@ -9,9 +9,9 @@ Allows the first attachment image associated with a post to be used in different
 
 == Description ==
 
-This plugin allows the first attachment image associated with a post to be used in different locations throughout a blog, a perfect compliment for magazine themes.
+Use the Attachment Image! allows the first attachment image associated with a post to be used in different locations throughout a blog, a perfect compliment for magazine themes.
 
-This plugin can include images of nearly any size, simply by using the included `<?php special_get_post_photo(); ?> function. See the installation page for more details regarding usage.
+This plugin can include images of nearly any size, simply by using the included `<?php special_get_post_photo(); ?>` function. See the installation page for more details regarding usage.
 
 
 == Installation ==
