@@ -26,8 +26,8 @@ By default, this function will include a thumbnail image. To include images of d
 <strong>Medium</strong> `<?php special_get_post_photo('medium'); ?></p>`<br />
 <strong>Large</strong> `<?php special_get_post_photo('large'); ?></p>`<br />
 <strong>Full</strong> `<?php special_get_post_photo('full'); ?>`<br />
-<strong>20 pox</strong> `<?php special_get_post_photo(array(20,20)); ?>`<br />
-Feel free to replace 20 with another specific size to best meet your needs.
+<strong>20 px</strong> `<?php special_get_post_photo(array(20,20)); ?>`<br />
+Feel free to replace 20px with another specific size to best meet your needs.
 
 This plugin also includes the capability to include a thumbnail image from each post to your RSS feed. To activate this feature, simply add this code to your functions.php file.
 
