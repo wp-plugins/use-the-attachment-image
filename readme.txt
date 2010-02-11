@@ -13,7 +13,6 @@ Use the Attachment Image! allows the first attachment image associated with a po
 
 This plugin can include images of nearly any size, simply by using the included `<?php special_get_post_photo(); ?>` function. See the installation page for more details regarding usage.
 
-
 == Installation ==
 
 To utilize this plugin, you will first need to upload `use_attachment_image.php` to the `/wp-content/plugins/` directory on your web server; and activate the plugin through the 'Plugins' menu in WordPress.
