@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Use the Attachment Image!
-Plugin URI: http://tomlany.net/
+Plugin URI: http://tomlany.net/use-the-attachment-image/
 Description: Allows the first attachment image associated with a post to be used in different locations throughout a blog.
 Author: Tom Lany
 Version: 1.0

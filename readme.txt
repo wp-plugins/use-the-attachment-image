@@ -33,6 +33,10 @@ This plugin also includes the capability to include a thumbnail image from each 
 `<?php add_filter('the_excerpt_rss', 'insertAttachmentRSS'); ?>`
 `<?php add_filter('the_content_feed', 'insertAttachmentRSS'); ?>`
 
+See <a href="http://tomlany.net/use-the-attachment-image/image-test/">an example of how this plugin can be used</a>.
+
+If you have any questions about this plugin, <a href="http://tomlany.net/use-the-attachment-image/">feel free to ask on my website</a>, and I will respond as my time allows.
+
 == Changelog ==
 
 = 1.0 =
