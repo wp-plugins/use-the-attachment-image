@@ -1,0 +1,56 @@
+<?php
+/*
+Plugin Name: Use the Attachment Image!
+Plugin URI: http://tomlany.net/use-the-attachment-image/
+Description: Allows the first attachment image associated with a post to be used in different locations throughout a blog.
+Author: Tom Lany
+Version: 1.01
+Author URI: http://tomlany.net/
+*/
+//
+//
+// Attachment image function
+function use_the_attachment_image($size='thumbnail')
+{	if ( $images = get_children(array(
+		'post_parent' => get_the_ID(),
+		'post_status' => 'inherit',
+		'post_type' => 'attachment',
+		'post_mime_type' => 'image',
+		'order' => 'ASC',
+		'orderby' => 'menu_order ID',
+		'numberposts' => 1)))
+	{	$permalink = get_permalink();
+		foreach( $images as $image )
+		{	echo '<a href="'.$permalink.'">';
+			echo wp_get_attachment_image($image->ID, $size, false);
+			echo '</a>';
+		}
+	}
+	else { echo ""; }
+}
+//
+// Attachment image (without link) function
+function use_the_attachment_image_nolink($size='thumbnail')
+{	if ( $images = get_children(array(
+		'post_parent' => get_the_ID(),
+		'post_status' => 'inherit',
+		'post_type' => 'attachment',
+		'post_mime_type' => 'image',
+		'order' => 'ASC',
+		'orderby' => 'menu_order ID',
+		'numberposts' => 1)))
+	{	$permalink = get_permalink();
+		foreach( $images as $image )
+		{ echo wp_get_attachment_image($image->ID, $size, false); }
+	}
+	else { echo ""; }
+}
+//
+// RSS function
+function insertAttachmentRSS($content) {
+   global $post;
+   { $content = use_the_attachment_image() . $content; }
+   return $content;
+}
+//
+?>
