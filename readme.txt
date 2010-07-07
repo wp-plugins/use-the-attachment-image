@@ -2,14 +2,14 @@
 Contributors: tomthewebmaster
 Tags: image, attachment image, thumbnail, magazine
 Requires at least: 2.7
-Tested up to: 2.9.2
+Tested up to: 3.0
 Stable tag: trunk
 
 Allows the first attachment image associated with a post to be used in different locations throughout a blog.
 
 == Description ==
 
-Use the Attachment Image! allows the first attachment image associated with a post to be displayed nearly anywhere on a blog, simply by adding a special funtion to a loop. This is a perfect compliment for magazine themes.
+Use the Attachment Image! allows the first attachment image associated with a post to be displayed nearly anywhere on a blog, simply by adding a special function to a loop. This plugin is a perfect compliment for magazine themes.
 
 This plugin can include images of nearly any size, simply by using the included `<?php use_the_attachment_image(); ?>` function. See the installation page for more details regarding usage.
 
@@ -26,7 +26,7 @@ By default, this function will include a thumbnail image. To include images of d
 <strong>Large</strong> `<?php use_the_attachment_image('large'); ?></p>`<br />
 <strong>Full</strong> `<?php use_the_attachment_image('full'); ?>`<br />
 <strong>20 px</strong> `<?php use_the_attachment_image(array(20,20)); ?>`<br />
-Feel free to replace 20px with another specific size to best meet your needs.
+Feel free to replace 20px with another specific size to best meet your needs. Note that WordPress will scale a larger image down to give you the size you desire here.
 
 This plugin also includes the capability to include a thumbnail image from each post to your RSS feed. To activate this feature, simply add this code to your functions.php file.
 
@@ -40,7 +40,7 @@ If you have any questions about this plugin, <a href="http://tomlany.net/use-the
 == Changelog ==
 
 = 1.01 =
-* Fixed the function name in the documentation. In a few cases, a function that did not exist was referenced. Thanks, <a href="http://www.taringacs.net/">Matías</a> for the report. The actual plugin was not changed.
+* Fixed the function name in the documentation. In a few cases, a function that did not exist was referenced. Thanks, <a href="http://www.taringacs.net/">Matias</a> for the report. The actual plugin was not changed.
 
 = 1.0 =
 * Initial release.
