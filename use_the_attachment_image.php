@@ -26,7 +26,7 @@ function use_the_attachment_image($size='thumbnail')
 			echo '</a>';
 		}
 	}
-	else { echo ""; }
+	else {}
 }
 //
 // Attachment image (without link) function
@@ -43,7 +43,7 @@ function use_the_attachment_image_nolink($size='thumbnail')
 		foreach( $images as $image )
 		{ echo wp_get_attachment_image($image->ID, $size, false); }
 	}
-	else { echo ""; }
+	else {}
 }
 //
 // RSS function
