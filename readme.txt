@@ -2,7 +2,7 @@
 Contributors: tomthewebmaster
 Tags: image, attachment image, thumbnail, magazine
 Requires at least: 2.7
-Tested up to: 3.0.4
+Tested up to: 3.1
 Stable tag: trunk
 
 Allows the first attachment image associated with a post to be used in different locations throughout a blog.
@@ -28,16 +28,26 @@ By default, this function will include a thumbnail image. To include images of d
 <strong>20 px</strong> `<?php use_the_attachment_image(array(20,20)); ?>`<br />
 Feel free to replace 20px with another specific size to best meet your needs. Note that WordPress will scale a larger image down to give you the size you desire here.
 
-This plugin also includes the capability to include a thumbnail image from each post to your RSS feed. To activate this feature, simply add this code to your functions.php file.
+It is possible to include a thumbnail image from each post in your RSS feed. To do this, simply add this code to your theme's functions.php file. From <a href="http://cdharrison.com/2009/12/16/the_post_thumbnail-for-rss-feeds/">cd harrison</a>.
 
-`<?php add_filter('the_excerpt_rss', 'insertAttachmentRSS'); ?>`
-`<?php add_filter('the_content_feed', 'insertAttachmentRSS'); ?>`
+`<?php
+function insertAttachmentRSS($content) {
+   global $post;
+   { $content = use_the_attachment_image() . $content; }
+   return $content;
+}
+add_filter('the_excerpt_rss', 'insertAttachmentRSS');
+add_filter('the_content_feed', 'insertAttachmentRSS');
+?>`
 
 See <a href="http://tomlany.net/use-the-attachment-image/image-test/">an example of how this plugin can be used</a>.
 
 If you have any questions about this plugin, <a href="http://tomlany.net/use-the-attachment-image/">feel free to ask on my website</a>, and I will respond as my time allows.
 
 == Changelog ==
+
+= 1.02 =
+* The code that includes the post image in an RSS feed was taken out of the plugin and moved to the readme file; as it did not previously work when it was included in a separate file from the plugin file as was suggested in the plugin instructions.
 
 = 1.01 =
 * Fixed the function name in the documentation. In a few cases, a function that did not exist was referenced. Thanks, <a href="http://www.taringacs.net/">Matias</a> for the report. The actual plugin was not changed.

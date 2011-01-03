@@ -4,7 +4,7 @@ Plugin Name: Use the Attachment Image!
 Plugin URI: http://tomlany.net/use-the-attachment-image/
 Description: Allows the first attachment image associated with a post to be used in different locations throughout a blog.
 Author: Tom Lany
-Version: 1.01
+Version: 1.02
 Author URI: http://tomlany.net/
 */
 //
@@ -44,13 +44,6 @@ function use_the_attachment_image_nolink($size='thumbnail')
 		{ echo wp_get_attachment_image($image->ID, $size, false); }
 	}
 	else {}
-}
-//
-// RSS function
-function insertAttachmentRSS($content) {
-   global $post;
-   { $content = use_the_attachment_image() . $content; }
-   return $content;
 }
 //
 ?>
