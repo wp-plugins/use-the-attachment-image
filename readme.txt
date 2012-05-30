@@ -2,7 +2,7 @@
 Contributors: tomthewebmaster
 Tags: image, attachment image, thumbnail, magazine
 Requires at least: 2.7
-Tested up to: 3.3
+Tested up to: 3.4
 Stable tag: trunk
 
 Allows the first attachment image associated with a post to be used in different locations throughout a blog.
