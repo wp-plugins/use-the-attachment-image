@@ -6,6 +6,7 @@ Description: Allows the first attachment image associated with a post to be used
 Author: Tom Lany
 Version: 1.02
 Author URI: http://tomlany.net/
+License: GPLv2 or later
 */
 //
 //
