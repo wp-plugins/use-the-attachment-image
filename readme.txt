@@ -31,13 +31,15 @@ Feel free to replace 20px with another specific size to best meet your needs. No
 It is possible to include a thumbnail image from each post in your RSS feed. To do this, simply add this code to your theme's functions.php file. From <a href="http://cdharrison.com/2009/12/16/the_post_thumbnail-for-rss-feeds/">cd harrison</a>.
 
 `<?php
-function insertAttachmentRSS($content) {
-   global $post;
-   { $content = use_the_attachment_image() . $content; }
-   return $content;
+if (function_exists('use_the_attachment_image')) {
+	function insertAttachmentRSS($content) {
+		global $post;
+		{ $content = use_the_attachment_image() . $content; }
+		return $content;
+	}
+	add_filter('the_excerpt_rss', 'insertAttachmentRSS');
+	add_filter('the_content_feed', 'insertAttachmentRSS');
 }
-add_filter('the_excerpt_rss', 'insertAttachmentRSS');
-add_filter('the_content_feed', 'insertAttachmentRSS');
 ?>`
 
 See <a href="http://tomlany.net/use-the-attachment-image/image-test/">an example of how this plugin can be used</a>.
